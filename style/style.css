@@ -67,6 +67,7 @@ header .header .logo img {
   font-weight: 600;
   color: #fff;
   text-transform: uppercase;
+  text-align: center;
 }
 .container .slide .slide_text span {
   color: #ffa898;
@@ -212,4 +213,33 @@ footer .footer_text {
 footer .footer_text a {
   color: #ffa898;
   text-decoration: none;
+}
+@media only screen and (max-width: 500px) {
+  .menu {
+    display: none !important;
+  }
+  .about {
+    grid-template-columns: none !important;
+    padding: 10px;
+  }
+  .about .about_box {
+    margin-bottom: 15px;
+  }
+  .about .about_box img {
+    width: 100%;
+  }
+  .banner {
+    display: flex !important;
+    justify-content: space-between;
+  }
+  .service .service_box .service_box-item {
+    width: 100%;
+  }
+  .service .service_box .service_box-item .service_box-title {
+    text-align: center;
+  }
+  .team {
+    display: flex !important;
+    flex-direction: column;
+  }
 }
