@@ -22,12 +22,54 @@
           </div>
           <div class="menu">
             <ul>
-              <li><a href="#">Anasayfa</a></li>
-              <li><a href="#about">Hakkımızda</a></li>
-              <li><a href="#service">Hizmetlerimiz</a></li>
-              <li><a href="#team">Kurumsal</a></li>
-              <li><a href="">Refranslarımız</a></li>
-              <li><a href="/contact.html">İletişim</a></li>
+              <li>
+                <a
+                  class="fade-in scale-effect"
+                  style="transition-delay: 0.1s"
+                  href="#"
+                  >Anasayfa</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fade-in scale-effect"
+                  style="transition-delay: 0.2s"
+                  href="#about"
+                  >Hakkımızda</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fade-in scale-effect"
+                  style="transition-delay: 0.3s"
+                  href="#service"
+                  >Hizmetlerimiz</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fade-in scale-effect"
+                  style="transition-delay: 0.4s"
+                  href="#team"
+                  >Kurumsal</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fade-in scale-effect"
+                  style="transition-delay: 0.5s"
+                  href=""
+                  >Refranslarımız</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fade-in scale-effect"
+                  style="transition-delay: 0.6s"
+                  href="/contact.html"
+                  >İletişim</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -36,10 +78,11 @@
     <div class="container">
       <!-- slide start -->
       <div class="slide">
-        <div class="slide_text">
+        <div class="slide_text fade-in scale-effect">
           <span>Pproqua</span> Mühendİslİk ve DanıŞmanlık
         </div>
       </div>
+
       <!-- slide end -->
       <!-- about start -->
       <div class="about" id="about">
@@ -87,13 +130,15 @@
       <!-- about end -->
       <!-- banner start -->
       <div class="banner">
-        <div class="banner_box">
+        <div class="banner_box fade-in scale-effect">
           <i class="fa-solid fa-ranking-star"></i>Kalite
         </div>
-        <div class="banner_box">
+        <div class="banner_box fade-in scale-effect">
           <i class="fa-regular fa-handshake"></i>Güven
         </div>
-        <div class="banner_box"><i class="fa-solid fa-bolt"></i>Hız</div>
+        <div class="banner_box fade-in scale-effect">
+          <i class="fa-solid fa-bolt"></i>Hız
+        </div>
       </div>
       <!-- banner end -->
       <!-- service start -->
@@ -101,40 +146,43 @@
         <div class="service_title global-title">Sunduğumuz hizmetler</div>
         <div class="service_box left_box">
           <div
-            class="service_box-item"
+            class="service_box-item fade-in"
             style="background: url(/image/hassas-mekanik.jpg)"
           >
             <div class="service_box-title">Hassas Mekanik Denetimi</div>
           </div>
           <div
-            class="service_box-item"
+            class="service_box-item fade-in"
             style="background: url(/image/basit-mekanik.jpg)"
           >
             <div class="service_box-title">basit Mekanik Denetimi</div>
           </div>
           <div
-            class="service_box-item"
+            class="service_box-item fade-in"
             style="background: url(/image/mekanik-montaj.jpg)"
           >
             <div class="service_box-title">mekanik montaj denetimi</div>
           </div>
           <div
-            class="service_box-item"
+            class="service_box-item fade-in"
             style="background: url(/image/elektromekanik-montaj.jpg)"
           >
             <div class="service_box-title">elektromekanik montaj denetimi</div>
           </div>
-          <div class="service_box-item" style="background: url(/image/ndt.jpg)">
+          <div
+            class="service_box-item fade-in"
+            style="background: url(/image/ndt.jpg)"
+          >
             <div class="service_box-title">NDT - Tahribatsız Muayene</div>
           </div>
           <div
-            class="service_box-item"
+            class="service_box-item fade-in"
             style="background: url(/image/danismanlik.jpg)"
           >
             <div class="service_box-title">Danışmanlık Hizmeti</div>
           </div>
           <div
-            class="service_box-item"
+            class="service_box-item fade-in"
             style="background: url(/image/elektronik-kart.jpg)"
           >
             <div class="service_box-title">
@@ -142,25 +190,25 @@
             </div>
           </div>
           <div
-            class="service_box-item"
+            class="service_box-item fade-in"
             style="background: url(/image/kablaj-denetimi.jpg)"
           >
             <div class="service_box-title">kablaj denetimi</div>
           </div>
           <div
-            class="service_box-item"
+            class="service_box-item fade-in"
             style="background: url(/image/kaplama-boya.jpg)"
           >
             <div class="service_box-title">kaplama-boya denetimi</div>
           </div>
           <div
-            class="service_box-item"
+            class="service_box-item fade-in"
             style="background: url(/image/kaynak-denetimi.jpg)"
           >
             <div class="service_box-title">kaynak denetimi</div>
           </div>
           <div
-            class="service_box-item"
+            class="service_box-item fade-in"
             style="background: url(/image/egitim-hizmeti.jpg)"
           >
             <div class="service_box-title">eğitim hizmeti</div>
@@ -198,3 +246,23 @@
     </footer>
   </body>
 </html>
+<script>
+  // Observer callback fonksiyonu
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // eleman ekrana girince
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); // bir kere çalışsın diye (opsiyonel)
+        }
+      });
+    },
+    {
+      threshold: 1, // %20’si görünür olunca tetiklensin
+    }
+  );
+
+  // Tüm fade-in elementlerini izle
+  document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+</script>
